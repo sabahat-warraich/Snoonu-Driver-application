@@ -6,6 +6,7 @@ import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import main.java.app.pojo.CreateNewTaskPojo;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class CreateNewTaskRequest extends AuthenticateMemberLoginRequest {
     String accessToken;
+    String id;
     RequestSpecification httpRequest;
     AuthenticateMemberLoginRequest authMember= new AuthenticateMemberLoginRequest();
     @Test
@@ -33,13 +35,13 @@ public class CreateNewTaskRequest extends AuthenticateMemberLoginRequest {
         headers.add(authentication);
         Headers allHeaders = new Headers(headers);
         httpRequest =  RestAssured.given().headers(allHeaders);
-        Response response = httpRequest
+        CreateNewTaskPojo response = httpRequest
                 .body(body)
                 .when()
-                .post()
-                .andReturn();
+                .post().as(CreateNewTaskPojo.class);
+        id=response.getId();
 
-        System.out.println(response.asPrettyString());
+        System.out.println("Order Id is : "+ id);
     }
 
 }

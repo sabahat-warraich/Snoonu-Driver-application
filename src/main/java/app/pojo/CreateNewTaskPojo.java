@@ -67,12 +67,12 @@ public class CreateNewTaskPojo {
         this.canGroupTask = canGroupTask;
     }
 
-    public String getDidAutoAssign ()
+    public boolean getDidAutoAssign ()
     {
         return didAutoAssign;
     }
 
-    public void setDidAutoAssign (String didAutoAssign)
+    public void setDidAutoAssign (boolean didAutoAssign)
     {
         this.didAutoAssign = didAutoAssign;
     }
@@ -107,42 +107,42 @@ public class CreateNewTaskPojo {
         this.deliverByUtc = deliverByUtc;
     }
 
-    public SkillCriteriaDto getSkillCriteriaDto ()
+    public CreateTaskSkillCriteriaDto getSkillCriteriaDto ()
     {
         return skillCriteriaDto;
     }
 
-    public void setSkillCriteriaDto (SkillCriteriaDto skillCriteriaDto)
+    public void setSkillCriteriaDto (CreateTaskSkillCriteriaDto skillCriteriaDto)
     {
         this.skillCriteriaDto = skillCriteriaDto;
     }
 
-    public String getPickupToDeliveryEtaMin ()
+    public float getPickupToDeliveryEtaMin ()
     {
         return pickupToDeliveryEtaMin;
     }
 
-    public void setPickupToDeliveryEtaMin (String pickupToDeliveryEtaMin)
+    public void setPickupToDeliveryEtaMin (float pickupToDeliveryEtaMin)
     {
         this.pickupToDeliveryEtaMin = pickupToDeliveryEtaMin;
     }
 
-    public String getPaymentStatusId ()
+    public int getPaymentStatusId ()
     {
         return paymentStatusId;
     }
 
-    public void setPaymentStatusId (String paymentStatusId)
+    public void setPaymentStatusId (int paymentStatusId)
     {
         this.paymentStatusId = paymentStatusId;
     }
 
-    public MetaDataFields[] getMetaDataFields ()
+    public CreateTaskMetaDataFields[] getMetaDataFields ()
     {
         return metaDataFields;
     }
 
-    public void setMetaDataFields (MetaDataFields[] metaDataFields)
+    public void setMetaDataFields (CreateTaskMetaDataFields[] metaDataFields)
     {
         this.metaDataFields = metaDataFields;
     }
@@ -157,32 +157,32 @@ public class CreateNewTaskPojo {
         this.createdAtUtc = createdAtUtc;
     }
 
-    public String getIsOffloaded ()
+    public boolean getIsOffloaded ()
     {
         return isOffloaded;
     }
 
-    public void setIsOffloaded (String isOffloaded)
+    public void setIsOffloaded (boolean isOffloaded)
     {
         this.isOffloaded = isOffloaded;
     }
 
-    public AutoAssignmentConfig getAutoAssignmentConfig ()
+    public CreateTaskAutoAssignment getAutoAssignmentConfig ()
     {
         return autoAssignmentConfig;
     }
 
-    public void setAutoAssignmentConfig (AutoAssignmentConfig autoAssignmentConfig)
+    public void setAutoAssignmentConfig (CreateTaskAutoAssignment autoAssignmentConfig)
     {
         this.autoAssignmentConfig = autoAssignmentConfig;
     }
 
-    public null getTaskAgentDetails ()
+    public String getTaskAgentDetails ()
     {
         return taskAgentDetails;
     }
 
-    public void setTaskAgentDetails (null taskAgentDetails)
+    public void setTaskAgentDetails (String taskAgentDetails)
     {
         this.taskAgentDetails = taskAgentDetails;
     }
@@ -237,12 +237,12 @@ public class CreateNewTaskPojo {
         this.updatedAtUtc = updatedAtUtc;
     }
 
-    public Delivery getDelivery ()
+    public CreateTaskDelivery getDelivery ()
     {
         return delivery;
     }
 
-    public void setDelivery (Delivery delivery)
+    public void setDelivery (CreateTaskDelivery delivery)
     {
         this.delivery = delivery;
     }
@@ -257,22 +257,22 @@ public class CreateNewTaskPojo {
         this.updatedBy = updatedBy;
     }
 
-    public TaskItems[] getTaskItems ()
+    public CreateTaskItems[] getTaskItems ()
     {
         return taskItems;
     }
 
-    public void setTaskItems (TaskItems[] taskItems)
+    public void setTaskItems (CreateTaskItems[] taskItems)
     {
         this.taskItems = taskItems;
     }
 
-    public Pickup getPickup ()
+    public CreateTaskPickUp getPickup ()
     {
         return pickup;
     }
 
-    public void setPickup (Pickup pickup)
+    public void setPickup (CreateTaskPickUp pickup)
     {
         this.pickup = pickup;
     }
@@ -287,22 +287,22 @@ public class CreateNewTaskPojo {
         this.priority = priority;
     }
 
-    public String getTotalCollectionAmountRemaining ()
+    public float getTotalCollectionAmountRemaining ()
     {
         return totalCollectionAmountRemaining;
     }
 
-    public void setTotalCollectionAmountRemaining (String totalCollectionAmountRemaining)
+    public void setTotalCollectionAmountRemaining (float totalCollectionAmountRemaining)
     {
         this.totalCollectionAmountRemaining = totalCollectionAmountRemaining;
     }
 
-    public String getTotalAmountCollected ()
+    public float getTotalAmountCollected ()
     {
         return totalAmountCollected;
     }
 
-    public void setTotalAmountCollected (String totalAmountCollected)
+    public void setTotalAmountCollected (float totalAmountCollected)
     {
         this.totalAmountCollected = totalAmountCollected;
     }
@@ -337,32 +337,32 @@ public class CreateNewTaskPojo {
         this.clientGeneratedId = clientGeneratedId;
     }
 
-    public null getOffloadingResponsibilityInfo ()
+    public String getOffloadingResponsibilityInfo ()
     {
         return offloadingResponsibilityInfo;
     }
 
-    public void setOffloadingResponsibilityInfo (null offloadingResponsibilityInfo)
+    public void setOffloadingResponsibilityInfo (String offloadingResponsibilityInfo)
     {
         this.offloadingResponsibilityInfo = offloadingResponsibilityInfo;
     }
 
-    public String getPickupToDeliveryDistanceKm ()
+    public float getPickupToDeliveryDistanceKm ()
     {
         return pickupToDeliveryDistanceKm;
     }
 
-    public void setPickupToDeliveryDistanceKm (String pickupToDeliveryDistanceKm)
+    public void setPickupToDeliveryDistanceKm (float pickupToDeliveryDistanceKm)
     {
         this.pickupToDeliveryDistanceKm = pickupToDeliveryDistanceKm;
     }
 
-    public String getAmountToBeCollected ()
+    public float getAmountToBeCollected ()
     {
         return amountToBeCollected;
     }
 
-    public void setAmountToBeCollected (String amountToBeCollected)
+    public void setAmountToBeCollected (float amountToBeCollected)
     {
         this.amountToBeCollected = amountToBeCollected;
     }
