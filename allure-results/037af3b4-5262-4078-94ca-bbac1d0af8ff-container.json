@@ -1,0 +1,1 @@
+{"uuid":"037af3b4-5262-4078-94ca-bbac1d0af8ff","name":"test.java.SignInTest","children":["8f3b8cf1-29b5-472f-84da-49a63e4e1cd0"],"befores":[{"name":"readJson","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1653215129589,"stop":1653215129634}],"afters":[],"start":1653215129456,"stop":1653215148971}

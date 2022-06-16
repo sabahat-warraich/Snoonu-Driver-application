@@ -1,0 +1,41 @@
+{
+  "transportTypeId": 1,
+  "deliveryFee": 0,
+  "pickupByUtc": "2099-12-15T15:07",
+  "deliverByUtc": "2099-12-23T15:53",
+  "notes": "Pls pickup",
+  "priority": 1,
+  "autoAssignmentConfig": {
+    "autoAssignment" : false,
+    "retryIntervalSec": 10,
+    "maxRetryCount": 2
+  },
+  "canGroupTask": true,
+  "taskItems": [
+    {
+      "name": "TestItem",
+      "quantity": 10,
+      "price": 1,
+      "notes": "hey there test notes"
+    }
+  ],
+  "pickupLocationTypeId": 2,
+  "deliveryLocationTypeId": 2,
+  "pickup": {
+    "Address": "Karachi Pakistan",
+    "Name": "Muhammad Zoaib",
+    "PhoneNumber": "0900786101",
+    "Latitude": 24.936831,
+    "Longitude": 67.032635
+  },
+  "delivery": {
+    "Address": "Al Maha Towers",
+    "Name": "Hassan Nadeem",
+    "PhoneNumber": "0900786101",
+    "Latitude": 24.01,
+    "Longitude": 51.01
+  },
+  "paymentStatusId": 3,
+  "userMetaDataDtos": [{"key":"key2","value":"value2","colorHex":"#FFFFFF"}],
+  "clientGeneratedId": "muhamma2s9"
+}
