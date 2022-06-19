@@ -25,7 +25,6 @@ public class AuthenticateMemberLoginRequest {
 
         access_token=response.getAccessToken();
 
-        System.out.println("Access token of Authenticate Member is : "+ access_token);
         return access_token;
     }
 }

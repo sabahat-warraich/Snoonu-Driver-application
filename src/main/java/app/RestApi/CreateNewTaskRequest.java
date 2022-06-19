@@ -4,8 +4,8 @@ import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.specification.RequestSpecification;
+import main.java.app.Utalities.JsonFileWriter;
 import main.java.app.pojo.CreateNewTaskPojo;
-import org.testng.annotations.Test;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -17,6 +17,7 @@ public class CreateNewTaskRequest extends AuthenticateMemberLoginRequest {
     String[] orderResponse = new String[2];
     RequestSpecification httpRequest;
     AuthenticateMemberLoginRequest authMember= new AuthenticateMemberLoginRequest();
+    JsonFileWriter JFW= new JsonFileWriter();
     public String[] createNewTask(){
 
         RestAssured.baseURI = "https://webgateway-staging-lb.falconflex.ai";
@@ -38,8 +39,9 @@ public class CreateNewTaskRequest extends AuthenticateMemberLoginRequest {
                 .when()
                 .post().as(CreateNewTaskPojo.class);
         id=response.getId();
+        JFW.writeOrderIdInJsonFile(id);
 
-        System.out.println("ID is : "+ id);
+
         orderResponse[0]= accessToken;
         orderResponse[1]=id;
         return orderResponse;
