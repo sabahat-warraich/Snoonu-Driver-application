@@ -2,9 +2,7 @@ package main.java.app.RestApi;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
-
 import io.restassured.http.Headers;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import main.java.app.pojo.CreateNewTaskPojo;
 import org.testng.annotations.Test;
@@ -16,10 +14,10 @@ import java.util.List;
 public class CreateNewTaskRequest extends AuthenticateMemberLoginRequest {
     String accessToken;
     String id;
+    String[] orderResponse = new String[2];
     RequestSpecification httpRequest;
     AuthenticateMemberLoginRequest authMember= new AuthenticateMemberLoginRequest();
-    @Test
-    public void createNewTask(){
+    public String[] createNewTask(){
 
         RestAssured.baseURI = "https://webgateway-staging-lb.falconflex.ai";
         RestAssured.basePath = "/trip-api/Task/";
@@ -41,7 +39,12 @@ public class CreateNewTaskRequest extends AuthenticateMemberLoginRequest {
                 .post().as(CreateNewTaskPojo.class);
         id=response.getId();
 
-        System.out.println("Order Id is : "+ id);
+        System.out.println("ID is : "+ id);
+        orderResponse[0]= accessToken;
+        orderResponse[1]=id;
+        return orderResponse;
+
+
     }
 
 }
